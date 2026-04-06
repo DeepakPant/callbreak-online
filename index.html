@@ -7,14 +7,12 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="manifest" href="./manifest-Cqoe-4o-.webmanifest">
     <title>Play Callbreak</title>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
  <style>
         html, body {
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100vh; /* IMPORTANT: Set to 100vh for full viewport height */
+            height: 100vh;
             overflow: hidden; /* Prevent scrolling */
             background-color: #1f1f1f;
             font-family: 'Inter', sans-serif;
@@ -27,159 +25,43 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 100vh; /* IMPORTANT: Set to 100vh for full viewport height */
+            height: 100vh;
             position: relative;
         }
 
        #game-container {
-    width: 100vw;
-    /* dvh = dynamic viewport height; it adjusts when the address bar hides/shows */
-    height: 100dvh; 
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-}
+            width: 100vw;
+            height: 100dvh; 
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
 
        canvas {
-    /* Ensure the canvas never exceeds the visible bounds */
-    max-height: 100% !important;
-    max-width: 100% !important;
-    object-fit: contain;
-}
-
-        #fullscreen-button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 12px 24px;
-            font-size: 1.1em;
-            cursor: pointer;
-            outline: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, transform 0.1s ease;
-            margin-top: 20px;
-            z-index: 1000;
-            width: calc(100% - 40px);
-            max-width: 300px;
+            max-height: 100% !important;
+            max-width: 100% !important;
+            object-fit: contain;
         }
 
-        #fullscreen-button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-        }
-
-        #fullscreen-button:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Message for portrait mode on mobile (using your CSS media query) */
-        @media screen and (orientation: portrait) and (max-width: 768px) {
-            #game-container::before {
-                content: "Please rotate your device to landscape for the best experience!";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.8);
-                color: white;
-                font-size: 1.5em;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 9999;
-                text-align: center;
-                pointer-events: none;
-            }
-        }
+        /* REMOVED: #fullscreen-button styles and portrait text overlay styles */
+        
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="./index-D2y1nsCD.js"></script>
-  <link rel="modulepreload" crossorigin href="./phaser-CFy7M1EZ.js">
+  <script type="module" crossorigin src="./index-DMR_CF5m.js"></script>
+  <link rel="modulepreload" crossorigin href="./phaser-Dp7NxFQg.js">
 </head>
 
 <body>
     <div id="app">
         <div id="game-container"></div>
-    </div>
-     <script>
-        // Using DOMContentLoaded to ensure the DOM is fully loaded before script execution
+        </div>
+    <script>
+        // Cleaned up script: Fullscreen button logic removed.
+        // Phaser will now handle scaling based on the container size automatically.
         document.addEventListener('DOMContentLoaded', () => {
-            const fullscreenButton = document.getElementById('fullscreen-button');
-
-            if (!fullscreenButton) {
-               
-                return;
-            }
-
-            // Media query to detect portrait orientation, shared with button logic
-            const portraitMediaQuery = window.matchMedia('(orientation: portrait)');
-
-            // A named function for the click handler for clarity and proper event listener management
-            const fullscreenButtonClickHandler = () => {
-                if (window.myPhaserGame) {
-                    const scaleManager = window.myPhaserGame.scale;
-                    if (scaleManager.isFullscreen) {
-                        scaleManager.stopFullscreen();
-                    } else {
-                        scaleManager.startFullscreen();
-                    }
-                }
-            };
-
-            // Function to update button text AND its visibility based on support and orientation
-            const updateButtonState = () => {
-                if (!window.myPhaserGame) {
-                    // Phaser game not yet ready, defer button state update
-                    return;
-                }
-
-                const scaleManager = window.myPhaserGame.scale;
-                const isFullscreenAvailable = scaleManager.fullscreen.available;
-                const currentOrientationIsPortrait = portraitMediaQuery.matches;
-
-                // Condition to hide the button:
-                // 1. Fullscreen API is NOT available on the device/browser
-                // OR
-                // 2. The device is currently in Landscape mode (as per your request)
-                if (!isFullscreenAvailable || !currentOrientationIsPortrait) {
-                    fullscreenButton.style.display = 'none';
-                    // Remove click listener if button is hidden to prevent unintended interactions
-                    fullscreenButton.removeEventListener('click', fullscreenButtonClickHandler);
-                    console.log(`[Fullscreen] Button hidden. Fullscreen Available: ${isFullscreenAvailable}, Orientation Portrait: ${currentOrientationIsPortrait}`);
-                } else {
-                    // Fullscreen is available AND device is in Portrait mode, so show the button
-                    fullscreenButton.style.display = 'flex';
-                    // Add click listener only when visible and functional (remove first to prevent duplicates)
-                    fullscreenButton.removeEventListener('click', fullscreenButtonClickHandler); // Ensure no duplicate listeners
-                    fullscreenButton.addEventListener('click', fullscreenButtonClickHandler);
-
-                    // Update button text based on current fullscreen state
-                    fullscreenButton.textContent = scaleManager.isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen';
-                    
-                }
-            };
-
-            // Set up a periodic check for when the Phaser game instance becomes available on the window
-            const checkPhaserReadyForButton = setInterval(() => {
-                if (window.myPhaserGame) {
-                    clearInterval(checkPhaserReadyForButton); // Stop checking once game is ready
-                    
-                    // Listen for Phaser's fullscreen events to keep button text and state updated
-                    window.myPhaserGame.scale.on('enterfullscreen', updateButtonState);
-                    window.myPhaserGame.scale.on('leavefullscreen', updateButtonState);
-                    
-                    // Also listen for general orientation changes (using the media query) to update button visibility
-                    portraitMediaQuery.addEventListener('change', updateButtonState);
-
-                    // Initial update of button state once Phaser is ready
-                    updateButtonState();
-                }
-            }, 100); // Check every 100ms
+            console.log("Game container initialized. Portrait overlay and fullscreen button removed.");
         });
     </script>
 </body>
