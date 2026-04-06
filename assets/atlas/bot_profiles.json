@@ -1,0 +1,515 @@
+{
+	"frames": {
+		"Aarati": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 170,
+				"h": 168
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 168
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 168
+			}
+		},
+		"Dearik": {
+			"frame": {
+				"x": 173,
+				"y": 1,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Dipika": {
+			"frame": {
+				"x": 345,
+				"y": 1,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Gopal": {
+			"frame": {
+				"x": 517,
+				"y": 1,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Harry": {
+			"frame": {
+				"x": 1,
+				"y": 172,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Jenifer": {
+			"frame": {
+				"x": 173,
+				"y": 172,
+				"w": 170,
+				"h": 168
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 168
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 168
+			}
+		},
+		"Jenny": {
+			"frame": {
+				"x": 345,
+				"y": 172,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"John": {
+			"frame": {
+				"x": 517,
+				"y": 172,
+				"w": 170,
+				"h": 168
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 168
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 168
+			}
+		},
+		"Malati": {
+			"frame": {
+				"x": 173,
+				"y": 342,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Moona": {
+			"frame": {
+				"x": 517,
+				"y": 342,
+				"w": 170,
+				"h": 168
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 168
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 168
+			}
+		},
+		"Nealson": {
+			"frame": {
+				"x": 1,
+				"y": 512,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Preeti": {
+			"frame": {
+				"x": 345,
+				"y": 512,
+				"w": 170,
+				"h": 168
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 168
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 168
+			}
+		},
+		"Ramesh": {
+			"frame": {
+				"x": 517,
+				"y": 512,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Rekha": {
+			"frame": {
+				"x": 1,
+				"y": 683,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Ritika": {
+			"frame": {
+				"x": 173,
+				"y": 683,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Roshan": {
+			"frame": {
+				"x": 345,
+				"y": 683,
+				"w": 170,
+				"h": 168
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 168
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 168
+			}
+		},
+		"Salman": {
+			"frame": {
+				"x": 517,
+				"y": 683,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Shakuntala": {
+			"frame": {
+				"x": 689,
+				"y": 1,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Shankar": {
+			"frame": {
+				"x": 689,
+				"y": 172,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Steve": {
+			"frame": {
+				"x": 689,
+				"y": 343,
+				"w": 171,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 171,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 171,
+				"h": 169
+			}
+		},
+		"Sunil": {
+			"frame": {
+				"x": 689,
+				"y": 514,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Sunita": {
+			"frame": {
+				"x": 689,
+				"y": 685,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Vishnu": {
+			"frame": {
+				"x": 1,
+				"y": 856,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Jack": {
+			"frame": {
+				"x": 173,
+				"y": 856,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		},
+		"Martha": {
+			"frame": {
+				"x": 345,
+				"y": 856,
+				"w": 170,
+				"h": 169
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 170,
+				"h": 169
+			},
+			"sourceSize": {
+				"w": 170,
+				"h": 169
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 861,
+			"h": 1026
+		},
+		"scale": "1"
+	}
+}

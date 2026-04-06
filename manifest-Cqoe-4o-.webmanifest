@@ -1,0 +1,9 @@
+{
+  "name": "Callbreak Game",
+  "short_name": "Callbreak",
+  "description": "Your exciting Callbreak game!",
+  "start_url": "./index.html",
+  "display": "standalone", // Key for fullscreen experience
+  "background_color": "#028af8",
+  "theme_color": "#028af8"
+}
