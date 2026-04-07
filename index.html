@@ -1,68 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="./favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <link rel="stylesheet" href="./style.css">
     <link rel="manifest" href="./manifest-Cqoe-4o-.webmanifest">
-    <title>Play Callbreak</title>
- <style>
-        html, body {
+    <title>Callbreak Online - Play Free Multiplayer Card Game</title>
+    <meta name="title" content="Callbreak Online - Play Free Multiplayer Card Game">
+    <meta name="description"
+        content="Play the popular Callbreak card game online for free. Experience real-time multiplayer, smart bot play, and smooth performance on play.callbreak.org.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://play.callbreak.org/">
+    <meta property="og:title" content="Callbreak Online - Play Free Multiplayer Card Game">
+    <meta property="og:description"
+        content="Join thousands of players in the ultimate Callbreak experience. Play offline or online with friends.">
+    <meta property="og:image" content="https://play.callbreak.org/og-image.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://play.callbreak.org/">
+    <meta property="twitter:title" content="Callbreak Online - Play Free Multiplayer Card Game">
+    <meta property="twitter:description" content="Experience the best Callbreak multiplayer on the web.">
+    <meta property="twitter:image" content="https://play.callbreak.org/og-image.jpg">
+
+    <link rel="canonical" href="https://play.callbreak.org/">
+
+
+    <style>
+        /* 1. Base setup: Remove fixed vh to prevent overflow in iframes */
+        html,
+        body {
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100vh;
-            overflow: hidden; /* Prevent scrolling */
-            background-color: #1f1f1f;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
             font-family: 'Inter', sans-serif;
-            color: #ecf0f1;
         }
 
+        /* 2. The App wrapper: Must be 100% of the PARENT, not the screen */
         #app {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 100vh;
+            height: 100%;
             position: relative;
         }
 
-       #game-container {
-            width: 100vw;
-            height: 100dvh; 
-            overflow: hidden;
+        /* 3. The Container: flex: 1 makes it take all remaining space */
+        #game-container {
+            flex: 1;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #000;
         }
 
-       canvas {
-            max-height: 100% !important;
+        /* 4. Canvas: contain ensures Phaser keeps its aspect ratio without black bars */
+        canvas {
             max-width: 100% !important;
+            max-height: 100% !important;
             object-fit: contain;
         }
 
-        /* REMOVED: #fullscreen-button styles and portrait text overlay styles */
-        
+        /* 5. Portrait Message: Only shows when NOT in fullscreen */
+        #rotate-message {
+            display: none;
+            color: #888;
+            font-size: 14px;
+            padding: 8px 0;
+            background: #1a1a1a;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+        }
+
+        @media screen and (orientation: portrait) {
+            #app:not(:fullscreen) #rotate-message {
+                display: block;
+            }
+
+            #app:not(-webkit-full-screen) #rotate-message {
+                display: block;
+            }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="./index-DMR_CF5m.js"></script>
-  <link rel="modulepreload" crossorigin href="./phaser-Dp7NxFQg.js">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Callbreak Online",
+  "operatingSystem": "Web, Android, iOS",
+  "applicationCategory": "GameApplication",
+  "genre": "Card Game",
+  "url": "https://play.callbreak.org/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./index-IDboGyy0.js"></script>
+  <link rel="modulepreload" crossorigin href="./phaser-CRpe_23L.js">
 </head>
 
 <body>
     <div id="app">
+        <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+            Callbreak Online - Play Multiplayer Card Game
+        </h1>
         <div id="game-container"></div>
-        </div>
-    <script>
-        // Cleaned up script: Fullscreen button logic removed.
-        // Phaser will now handle scaling based on the container size automatically.
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log("Game container initialized. Portrait overlay and fullscreen button removed.");
-        });
-    </script>
+        <div id="rotate-message">Rotate to landscape for the best experience</div>
+    </div>
 </body>
+
 </html>
